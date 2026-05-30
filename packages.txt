@@ -1,6 +1,7 @@
 base
 base-devel
 btrfs-progs
+brightnessctl
 cmake
 dolphin
 efibootmgr

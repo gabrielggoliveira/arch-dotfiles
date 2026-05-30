@@ -62,6 +62,7 @@ Estes pacotes formam a fundação do Arch Linux, gerenciamento de hardware, comp
 
 ### 2. Pacotes Específicos do Hyprland e Interface
 Estes pacotes são responsáveis pelo ambiente gráfico, aparência, terminal, fontes e utilitários de produtividade:
+* **`brightnessctl`**: Utilitário de linha de comando para controlar o brilho da tela (laptops/monitores).
 * **`hyprland`**: O compositor Wayland (Window Manager) que gerencia as janelas do sistema.
 * **`hyprlauncher`**: Menu iniciador de aplicativos leve.
 * **`hyprpaper`**: Utilitário para gerenciar e alternar papéis de parede.
