@@ -6,6 +6,7 @@ cmake
 dolphin
 efibootmgr
 firefox
+gamemode
 git
 hyprland
 hyprlauncher
@@ -13,6 +14,7 @@ hyprlock
 hyprpaper
 hyprpolkitagent
 intel-ucode
+irqbalance
 kitty
 linux
 linux-firmware
@@ -25,6 +27,7 @@ pipewire-pulse
 sddm
 snapper
 sudo
+thermald
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols-common
 vulkan-radeon
