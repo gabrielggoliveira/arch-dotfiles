@@ -19,6 +19,7 @@ make
 mako
 nano
 openssh
+pipewire-pulse
 snapper
 sudo
 ttf-jetbrains-mono-nerd

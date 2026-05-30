@@ -56,6 +56,7 @@ Estes pacotes formam a fundação do Arch Linux, gerenciamento de hardware, comp
 * **`snapper`**: Ferramenta para criação e gestão de snapshots (restauração rápida de sistema).
 * **`zram-generator`**: Gerador automático para configurar ZRAM (melhoria de performance e uso de memória RAM).
 * **`openssh`**: Cliente e servidor de SSH seguro.
+* **`pipewire-pulse`**: Camada de compatibilidade do PulseAudio para o PipeWire (essencial para que navegadores e outros aplicativos de desktop consigam reproduzir som).
 * **`git`**: Sistema de controle de versão de código.
 * **`cmake` e `make`**: Ferramentas de automação de compilação.
 * **`nano`**: Editor de texto rápido via terminal.
