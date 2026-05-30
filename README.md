@@ -106,3 +106,26 @@ Estes pacotes são instalados a partir do repositório da comunidade (AUR) e req
 * **API Vulkan (RADV)**: Habilitada através do pacote `vulkan-radeon` (Mesa RADV) para máxima performance de renderização 3D em Wayland e compatibilidade total com Wine/Proton (Steam).
 * **Aceleração de Vídeo por Hardware**: Habilitada via driver `radeonsi_drv_video` (VA-API integrado ao Mesa) para decodificação de mídia por hardware sem sobrecarga de CPU.
 
+### 3. Otimizações para Jogos na Steam
+Para obter a melhor performance e compatibilidade em jogos na Steam sob o Arch Linux e Hyprland:
+
+* **Multilib e Drivers de 32-bits**: 
+  A Steam e muitos jogos antigos rodam em 32-bits. Para que funcionem corretamente, é necessário habilitar o repositório `[multilib]` no seu `/etc/pacman.conf` e instalar os pacotes de driver de 32-bits:
+  ```bash
+  sudo pacman -S lib32-mesa lib32-vulkan-radeon
+  ```
+* **Feral GameMode**:
+  O pacote `gamemode` já está instalado no sistema. Para ativá-lo em um jogo da Steam, clique com o botão direito sobre o jogo na sua biblioteca, acesse **Propriedades > Geral > Opções de Inicialização** e insira:
+  ```bash
+  gamemoderun %command%
+  ```
+* **Proton e Proton-GE (GloriousEggroll)**:
+  Para máxima compatibilidade com jogos de Windows, utilize o Proton (nativo da Steam) ou instale o **Proton-GE** (uma versão da comunidade com patches adicionais de performance e correção de vídeo). O Proton-GE pode ser instalado facilmente com o gerenciador gráfico `protonup-qt`.
+* **Compilador de Shaders ACO**:
+  O driver RADV já utiliza o compilador ACO por padrão, reduzindo drasticamente os engasgos (*stuttering*) causados por compilação de shaders durante a gameplay.
+* **Gamescope (Opcional)**:
+  Para jogos que apresentem problemas de foco, resolução ou dimensionamento no Hyprland (Wayland), instale o `gamescope` (micro-compositor da Valve) e use a seguinte opção de inicialização na Steam (substituindo `-r 180` pela taxa de atualização correta do monitor):
+  ```bash
+  gamescope -f -r 180 -- %command%
+  ```
+
