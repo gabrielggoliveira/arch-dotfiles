@@ -38,3 +38,40 @@ O script `install.sh` executa as seguintes etapas de forma segura:
 2. **Instalação de Pacotes**: Instala todos os pacotes listados em `packages.txt` usando `pacman -S --needed`. Os pacotes que já estiverem instalados serão pulados automaticamente.
 3. **Links Simbólicos (Symlinks)**: Cria links simbólicos apontando para os arquivos do repositório. 
    - *Nota de Segurança:* Se já existir um arquivo de configuração real no seu computador (por exemplo, um `.bashrc` antigo), o script criará um backup dele com a extensão `.backup` (ex: `.bashrc.backup`) antes de criar o link.
+
+## Explicação dos Pacotes
+
+Os pacotes listados em `packages.txt` estão divididos entre a base essencial do sistema e os pacotes específicos do ambiente Hyprland:
+
+### 1. Pacotes Essenciais do Sistema (Base)
+Estes pacotes formam a fundação do Arch Linux, gerenciamento de hardware, compilação de código e ferramentas administrativas básicas:
+* **`base`**: Pacote base do Arch Linux contendo os utilitários fundamentais de sistema.
+* **`base-devel`**: Grupo de ferramentas essenciais para compilação (compiladores como `gcc`, utilitários como `pkg-config`, etc.).
+* **`linux`**: O Kernel do Linux.
+* **`linux-firmware`**: Firmwares necessários para compatibilidade de placas e dispositivos de hardware.
+* **`intel-ucode`**: Atualizações de microcódigo de segurança e estabilidade para processadores Intel.
+* **`sudo`**: Utilitário para permitir execução de comandos como administrador.
+* **`efibootmgr`**: Ferramenta para gerenciar entradas de boot no firmware UEFI.
+* **`btrfs-progs`**: Utilitários para gerenciar partições formatadas em Btrfs.
+* **`snapper`**: Ferramenta para criação e gestão de snapshots (restauração rápida de sistema).
+* **`zram-generator`**: Gerador automático para configurar ZRAM (melhoria de performance e uso de memória RAM).
+* **`openssh`**: Cliente e servidor de SSH seguro.
+* **`git`**: Sistema de controle de versão de código.
+* **`cmake` e `make`**: Ferramentas de automação de compilação.
+* **`nano`**: Editor de texto rápido via terminal.
+
+### 2. Pacotes Específicos do Hyprland e Interface
+Estes pacotes são responsáveis pelo ambiente gráfico, aparência, terminal, fontes e utilitários de produtividade:
+* **`hyprland`**: O compositor Wayland (Window Manager) que gerencia as janelas do sistema.
+* **`hyprlauncher`**: Menu iniciador de aplicativos leve.
+* **`hyprpaper`**: Utilitário para gerenciar e alternar papéis de parede.
+* **`hyprpolkitagent`**: Agente de autenticação Polkit nativo do Hyprland (janelas de permissão administrativa).
+* **`waybar`**: Barra de status personalizável na tela.
+* **`mako`**: Daemon leve para exibir notificações do sistema.
+* **`kitty`**: Emulador de terminal acelerado por GPU.
+* **`dolphin`**: Gerenciador de arquivos gráfico (desenvolvido pelo KDE).
+* **`firefox`**: Navegador de internet principal.
+* **`xdg-desktop-portal-hyprland`**: Backend do portal desktop para Hyprland (necessário para compartilhamento de tela, gravação e etc.).
+* **`xdg-desktop-portal-gtk`**: Portal desktop complementar baseado em GTK (usado para caixas de diálogo de escolha de arquivos).
+* **`ttf-jetbrains-mono-nerd`**: Fonte JetBrains Mono com suporte a ícones (Nerd Fonts).
+* **`ttf-nerd-fonts-symbols-common`**: Fonte de símbolos comuns de ícones adicionais para a interface.
