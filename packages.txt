@@ -18,6 +18,7 @@ linux
 linux-firmware
 make
 mako
+mesa-utils
 nano
 openssh
 pipewire-pulse
@@ -26,6 +27,8 @@ snapper
 sudo
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols-common
+vulkan-radeon
+vulkan-tools
 waybar
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
