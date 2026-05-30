@@ -1,0 +1,115 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Inter", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(23, 23, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: #a6adc8;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    min-width: 32px;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #cdd6f4;
+    box-shadow: inherit;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    color: #11111b;
+    background: linear-gradient(45deg, #89b4fa, #b4befe);
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#workspaces button.urgent {
+    background-color: #f38ba8;
+    color: #11111b;
+}
+
+#clock,
+#wireplumber,
+#network,
+#cpu,
+#memory,
+#tray {
+    padding: 0 15px;
+    margin: 5px 2px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+/* Individual Module Styles */
+#clock {
+    color: #cdd6f4;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#wireplumber {
+    color: #a6e3a1;
+}
+
+#wireplumber.muted {
+    color: #f38ba8;
+    background-color: rgba(243, 139, 168, 0.1);
+}
+
+#network {
+    color: #89dceb;
+}
+
+#network.disconnected {
+    color: #f38ba8;
+    background-color: rgba(243, 139, 168, 0.1);
+}
+
+#cpu {
+    color: #f38ba8;
+}
+
+#memory {
+    color: #fab387;
+}
+
+#tray {
+    margin-right: 8px;
+}
+
+/* Hover animations for interactivity */
+#wireplumber:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#clock:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
