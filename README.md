@@ -31,7 +31,7 @@ Este repositório contém a lista de pacotes e arquivos de configuração (dotfi
    ```bash
    ./install.sh
    ```
-4. Para instalar os pacotes adicionais do AUR (como o `noctalia-shell`), você pode usar o `yay` (que é instalado automaticamente se você usar o script de compilação ou se já o tiver):
+4. Para instalar pacotes adicionais do AUR (como o `yay-bin` para gerenciamento do AUR), você pode usar o comando:
    ```bash
    yay -S --needed - < aur_packages.txt
    ```
@@ -86,5 +86,4 @@ Estes pacotes são responsáveis pelo ambiente gráfico, aparência, terminal, f
 ### 3. Pacotes do AUR (Arch User Repository)
 Estes pacotes são instalados a partir do repositório da comunidade (AUR) e requerem um helper como o `yay`:
 * **`yay-bin`**: O helper do AUR mais popular do Arch Linux, usado para buscar, baixar e compilar pacotes da comunidade automaticamente.
-* **`noctalia-shell`**: Desktop shell elegante e minimalista voltado para compositores Wayland (fornece barras de tarefas, widgets, dock, notificações e área de controle).
 
