@@ -13,6 +13,7 @@
         "clock"
     ],
     "modules-right": [
+        "custom/notifications",
         "wireplumber",
         "network",
         "cpu",
@@ -34,6 +35,15 @@
         "format-muted": "󰝟 Muted",
         "format-icons": ["󰕿", "󰖀", "󰕾"],
         "on-click": "pavucontrol"
+    },
+    "custom/notifications": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "python /home/gabriel/.config/waybar/mako.py",
+        "interval": 2,
+        "on-click": "makoctl mode -t dnd",
+        "on-click-right": "makoctl dismiss -a",
+        "tooltip": true
     },
     "network": {
         "format-wifi": "󰖩 {essid}",

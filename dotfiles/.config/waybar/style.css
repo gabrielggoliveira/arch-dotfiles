@@ -59,6 +59,7 @@ window#waybar.hidden {
 #network,
 #cpu,
 #memory,
+#custom-notifications,
 #tray {
     padding: 0 15px;
     margin: 5px 2px;
@@ -101,6 +102,14 @@ window#waybar.hidden {
     color: #fab387;
 }
 
+#custom-notifications {
+    color: #f9e2af;
+}
+
+#custom-notifications.dnd {
+    color: #a6adc8;
+}
+
 #tray {
     margin-right: 8px;
 }
@@ -110,6 +119,7 @@ window#waybar.hidden {
 #network:hover,
 #cpu:hover,
 #memory:hover,
+#custom-notifications:hover,
 #clock:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
