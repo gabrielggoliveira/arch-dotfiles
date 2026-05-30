@@ -20,6 +20,7 @@ mako
 nano
 openssh
 pipewire-pulse
+sddm
 snapper
 sudo
 ttf-jetbrains-mono-nerd
