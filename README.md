@@ -5,8 +5,9 @@ Este repositório contém a lista de pacotes e arquivos de configuração (dotfi
 ## Conteúdo do Repositório
 
 - **`packages.txt`**: Lista de pacotes explícitos do sistema (instalados via `pacman`).
+- **`aur_packages.txt`**: Lista de pacotes do Arch User Repository (AUR) instalados via helper (como `yay`).
 - **`dotfiles/`**: Arquivos de configuração de usuário (`.bashrc`, `.bash_profile`, `hyprland.conf`, etc.).
-- **`install.sh`**: Script automatizado para instalar todos os pacotes e criar links simbólicos (symlinks) seguros para as configurações.
+- **`install.sh`**: Script automatizado para instalar todos os pacotes oficiais e criar links simbólicos (symlinks) seguros para as configurações.
 
 ## Requisitos
 
@@ -26,9 +27,13 @@ Este repositório contém a lista de pacotes e arquivos de configuração (dotfi
    ```bash
    cd ~/workspace/arch-dotfiles
    ```
-3. Execute o script de instalação:
+3. Execute o script de instalação para pacotes oficiais e dotfiles:
    ```bash
    ./install.sh
+   ```
+4. Para instalar os pacotes adicionais do AUR (como o `noctalia-shell`), você pode usar o `yay` (que é instalado automaticamente se você usar o script de compilação ou se já o tiver):
+   ```bash
+   yay -S --needed - < aur_packages.txt
    ```
 
 ## Funcionamento do Script de Instalação
@@ -77,3 +82,9 @@ Estes pacotes são responsáveis pelo ambiente gráfico, aparência, terminal, f
 * **`xdg-desktop-portal-gtk`**: Portal desktop complementar baseado em GTK (usado para caixas de diálogo de escolha de arquivos).
 * **`ttf-jetbrains-mono-nerd`**: Fonte JetBrains Mono com suporte a ícones (Nerd Fonts).
 * **`ttf-nerd-fonts-symbols-common`**: Fonte de símbolos comuns de ícones adicionais para a interface.
+
+### 3. Pacotes do AUR (Arch User Repository)
+Estes pacotes são instalados a partir do repositório da comunidade (AUR) e requerem um helper como o `yay`:
+* **`yay-bin`**: O helper do AUR mais popular do Arch Linux, usado para buscar, baixar e compilar pacotes da comunidade automaticamente.
+* **`noctalia-shell`**: Desktop shell elegante e minimalista voltado para compositores Wayland (fornece barras de tarefas, widgets, dock, notificações e área de controle).
+
