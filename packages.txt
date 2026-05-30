@@ -16,6 +16,8 @@ hyprpolkitagent
 intel-ucode
 irqbalance
 kitty
+lib32-mesa
+lib32-vulkan-radeon
 linux
 linux-firmware
 make
@@ -26,6 +28,7 @@ openssh
 pipewire-pulse
 sddm
 snapper
+steam
 sudo
 thermald
 ttf-jetbrains-mono-nerd
