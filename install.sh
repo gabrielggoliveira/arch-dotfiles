@@ -77,6 +77,7 @@ symlink_file "$DOTFILES_DIR/.config/dolphinrc" "$HOME/.config/dolphinrc"
 symlink_file "$DOTFILES_DIR/.config/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 symlink_file "$DOTFILES_DIR/.config/hypr/hyprlock.conf" "$HOME/.config/hypr/hyprlock.conf"
 symlink_file "$DOTFILES_DIR/.config/hypr/shortcuts.py" "$HOME/.config/hypr/shortcuts.py"
+symlink_file "$DOTFILES_DIR/.vscode-oss/argv.json" "$HOME/.vscode-oss/argv.json"
 
 echo -e "\n${GREEN}=== Setup completed successfully! ===${NC}"
 echo -e "${YELLOW}Note: You may need to log out and log back in (or run 'hyprctl dispatch exit') to apply all changes.${NC}"

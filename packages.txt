@@ -3,11 +3,13 @@ base-devel
 btrfs-progs
 brightnessctl
 cmake
+code
 dolphin
 efibootmgr
 firefox
 gamemode
 git
+gnome-keyring
 hyprland
 hyprlauncher
 hyprlock
@@ -16,6 +18,7 @@ hyprpolkitagent
 intel-ucode
 irqbalance
 kitty
+libsecret
 lib32-mesa
 lib32-vulkan-radeon
 linux
