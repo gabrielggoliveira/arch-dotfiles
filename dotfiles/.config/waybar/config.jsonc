@@ -18,7 +18,9 @@
         "network",
         "cpu",
         "memory",
-        "tray"
+        "tray",
+        "custom/hibernate",
+        "custom/power"
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -65,5 +67,17 @@
     "tray": {
         "icon-size": 18,
         "spacing": 10
+    },
+    "custom/hibernate": {
+        "format": "󰒲",
+        "tooltip": true,
+        "tooltip-format": "Hibernar",
+        "on-click": "systemctl hibernate"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": true,
+        "tooltip-format": "Desligar",
+        "on-click": "systemctl poweroff"
     }
 }

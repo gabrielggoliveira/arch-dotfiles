@@ -60,6 +60,8 @@ window#waybar.hidden {
 #cpu,
 #memory,
 #custom-notifications,
+#custom-hibernate,
+#custom-power,
 #tray {
     padding: 0 15px;
     margin: 5px 2px;
@@ -110,7 +112,12 @@ window#waybar.hidden {
     color: #a6adc8;
 }
 
-#tray {
+#custom-hibernate {
+    color: #b4befe;
+}
+
+#custom-power {
+    color: #f38ba8;
     margin-right: 8px;
 }
 
@@ -122,4 +129,12 @@ window#waybar.hidden {
 #custom-notifications:hover,
 #clock:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+#custom-hibernate:hover {
+    background-color: rgba(180, 190, 254, 0.15);
+}
+
+#custom-power:hover {
+    background-color: rgba(243, 139, 168, 0.15);
 }
