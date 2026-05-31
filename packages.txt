@@ -1,3 +1,4 @@
+anki
 base
 base-devel
 btrfs-progs
