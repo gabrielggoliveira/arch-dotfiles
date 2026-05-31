@@ -48,7 +48,7 @@ symlink_file() {
 
 # Step 1: Install packages
 if [ -f "$PACKAGES_FILE" ]; then
-    echo -e "\n${BLUE}[1/2] Installing packages from packages.txt...${NC}"
+    echo -e "\n${BLUE}[1/3] Installing packages from packages.txt...${NC}"
     # Read packages from file, filtering out empty lines and comments
     packages=()
     while IFS= read -r line; do
@@ -67,8 +67,40 @@ else
     echo -e "${RED}Warning: packages.txt not found! Skipping package installation.${NC}"
 fi
 
-# Step 2: Apply dotfiles
-echo -e "\n${BLUE}[2/2] Applying dotfiles (creating symlinks)...${NC}"
+# Step 2: Install AUR packages
+if [ -f "$SCRIPT_DIR/aur_packages.txt" ]; then
+    echo -e "\n${BLUE}[2/3] Installing AUR packages from aur_packages.txt...${NC}"
+
+    # Check if yay is installed, if not install it
+    if ! command -v yay &> /dev/null; then
+        echo -e "${YELLOW}yay is not installed. Installing yay-bin from AUR...${NC}"
+        temp_dir=$(mktemp -d)
+        git clone https://aur.archlinux.org/yay-bin.git "$temp_dir"
+        (cd "$temp_dir" && makepkg -si --noconfirm)
+        rm -rf "$temp_dir"
+    fi
+
+    # Read AUR packages from file
+    aur_packages=()
+    while IFS= read -r line; do
+        [[ -z "$line" || "$line" =~ ^# ]] && continue
+        # yay-bin is already installed, skip it
+        [[ "$line" == "yay-bin" ]] && continue
+        aur_packages+=("$line")
+    done < "$SCRIPT_DIR/aur_packages.txt"
+
+    if [ ${#aur_packages[@]} -gt 0 ]; then
+        echo -e "Installing AUR packages: ${aur_packages[*]}"
+        yay -S --needed --noconfirm "${aur_packages[@]}"
+    else
+        echo -e "${YELLOW}No extra AUR packages to install.${NC}"
+    fi
+else
+    echo -e "${RED}Warning: aur_packages.txt not found! Skipping AUR installation.${NC}"
+fi
+
+# Step 3: Apply dotfiles
+echo -e "\n${BLUE}[3/3] Applying dotfiles (creating symlinks)...${NC}"
 
 # Symlink individual configuration files
 symlink_file "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"

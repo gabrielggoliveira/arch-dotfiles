@@ -27,21 +27,18 @@ Este repositório contém a lista de pacotes e arquivos de configuração (dotfi
    ```bash
    cd ~/workspace/arch-dotfiles
    ```
-3. Execute o script de instalação para pacotes oficiais e dotfiles:
+3. Execute o script de instalação para configurar todo o sistema:
    ```bash
    ./install.sh
-   ```
-4. Para instalar pacotes adicionais do AUR (como o `yay-bin` para gerenciamento do AUR), você pode usar o comando:
-   ```bash
-   yay -S --needed - < aur_packages.txt
    ```
 
 ## Funcionamento do Script de Instalação
 
 O script `install.sh` executa as seguintes etapas de forma segura:
 1. **Verificação**: Confirma se está rodando no Arch Linux.
-2. **Instalação de Pacotes**: Instala todos os pacotes listados em `packages.txt` usando `pacman -S --needed`. Os pacotes que já estiverem instalados serão pulados automaticamente.
-3. **Links Simbólicos (Symlinks)**: Cria links simbólicos apontando para os arquivos do repositório. 
+2. **Instalação de Pacotes do Pacman**: Instala todos os pacotes oficiais listados em `packages.txt`.
+3. **Instalação de Pacotes do AUR**: Verifica se o helper `yay` está instalado. Caso contrário, compila e instala o `yay-bin` automaticamente do AUR, e em seguida instala todos os pacotes de comunidade listados em `aur_packages.txt`.
+4. **Links Simbólicos (Symlinks)**: Cria links simbólicos apontando para os arquivos do repositório. 
    - *Nota de Segurança:* Se já existir um arquivo de configuração real no seu computador (por exemplo, um `.bashrc` antigo), o script criará um backup dele com a extensão `.backup` (ex: `.bashrc.backup`) antes de criar o link.
 
 ## Explicação dos Pacotes
