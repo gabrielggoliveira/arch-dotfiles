@@ -13,7 +13,7 @@
         "clock"
     ],
     "modules-right": [
-        "custom/notifications",
+        "custom/notification",
         "wireplumber",
         "network",
         "cpu",
@@ -37,14 +37,25 @@
         "format-icons": ["󰕿", "󰖀", "󰕾"],
         "on-click": "pavucontrol"
     },
-    "custom/notifications": {
-        "format": "{}",
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󰂚<span foreground='red'><sup></sup></span>",
+            "none": "󰂚",
+            "dnd-notification": "󰂛<span foreground='red'><sup></sup></span>",
+            "dnd-none": "󰂛",
+            "inhibited-notification": "󰂚<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "󰂚",
+            "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": "󰂛"
+        },
         "return-type": "json",
-        "exec": "python /home/gabriel/.config/waybar/mako.py",
-        "interval": 2,
-        "on-click": "makoctl mode -t dnd",
-        "on-click-right": "makoctl dismiss -a",
-        "tooltip": true
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "escape": true
     },
     "network": {
         "format-wifi": "󰖩 {essid}",

@@ -1,0 +1,197 @@
+/*
+ * SwayNC Modern Dark Glassmorphism Stylesheet
+ */
+
+@define-color base00 #1e1e2e; /* Catppuccin Mocha Base */
+@define-color base02 #313244; /* Surface 0 */
+@define-color base03 #45475a; /* Surface 1 */
+@define-color base05 #cdd6f4; /* Text */
+@define-color base08 #f38ba8; /* Red */
+@define-color base0A #f9e2af; /* Yellow */
+@define-color base0B #a6e3a1; /* Green */
+@define-color base0D #89b4fa; /* Blue */
+@define-color base0E #cba6f7; /* Mauve */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "Inter", sans-serif;
+}
+
+.control-center {
+  background: rgba(30, 30, 46, 0.85); /* base00 with opacity */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  margin: 12px;
+  width: 400px;
+  min-height: 200px;
+  max-height: 600px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  color: @base05;
+}
+
+.control-center-list {
+  background: transparent;
+  padding: 10px;
+}
+
+/* Sizing of Scrollbar */
+.control-center-list-placeholder {
+  opacity: 0.5;
+}
+
+/* Scrollbar styling */
+.control-center scrollbar {
+  background: transparent;
+  width: 6px;
+}
+
+.control-center scrollbar slider {
+  background: @base03;
+  border-radius: 4px;
+  min-height: 40px;
+}
+
+.control-center scrollbar slider:hover {
+  background: @base0D;
+}
+
+/* Widget Header / Title */
+.widget-title {
+  padding: 15px 15px 5px 15px;
+}
+
+.widget-title > label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: @base0E;
+}
+
+.widget-title > button {
+  background: rgba(243, 139, 168, 0.15); /* base08 Red with opacity */
+  color: @base08;
+  border: 1px solid rgba(243, 139, 168, 0.3);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.widget-title > button:hover {
+  background: @base08;
+  color: @base00;
+  box-shadow: 0 0 10px rgba(243, 139, 168, 0.4);
+}
+
+/* Widget DND */
+.widget-dnd {
+  padding: 5px 15px 15px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.widget-dnd > label {
+  font-weight: bold;
+}
+
+.widget-dnd > switch {
+  background: @base02;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  outline: none;
+}
+
+.widget-dnd > switch slider {
+  background: @base03;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.widget-dnd > switch:checked {
+  background: @base0D;
+}
+
+.widget-dnd > switch:checked slider {
+  background: @base05;
+}
+
+/* Notifications area */
+.notification-row {
+  outline: none;
+  margin: 6px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.notification {
+  background: rgba(49, 50, 68, 0.6); /* base02 with opacity */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  transform: translateY(-1px);
+}
+
+.notification-row:hover .notification {
+  border-color: rgba(137, 180, 250, 0.3); /* blue */
+  background: rgba(49, 50, 68, 0.85);
+}
+
+.notification-content {
+  margin: 4px;
+}
+
+.notification-default-image {
+  background: @base0D;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.notification-image {
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.summary {
+  font-weight: bold;
+  font-size: 1rem;
+  color: @base0D;
+}
+
+.body {
+  font-size: 0.9rem;
+  color: @base05;
+  margin-top: 4px;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: @base03;
+  margin-right: 10px;
+}
+
+.close-button {
+  background: transparent;
+  color: @base03;
+  border-radius: 50%;
+  padding: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.close-button:hover {
+  background: rgba(243, 139, 168, 0.2);
+  color: @base08;
+}
+
+/* Urgency styles */
+.critical .notification {
+  border: 1px solid @base08;
+  background: rgba(243, 139, 168, 0.15);
+}
+
+.critical .summary {
+  color: @base08;
+}

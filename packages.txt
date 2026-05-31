@@ -25,7 +25,6 @@ lib32-vulkan-radeon
 linux
 linux-firmware
 make
-mako
 mesa-utils
 nano
 openssh
@@ -34,6 +33,7 @@ sddm
 snapper
 steam
 sudo
+swaync
 thermald
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols-common

@@ -77,7 +77,7 @@ Estes pacotes são responsáveis pelo ambiente gráfico, aparência, terminal, f
 * **`sddm`**: Gerenciador de login gráfico (Display Manager) para inicializar a sessão do Hyprland.
 * **`hyprlock`**: Bloqueador de tela rápido, seguro e customizável nativo para o Hyprland.
 * **`waybar`**: Barra de status personalizável na tela.
-* **`mako`**: Daemon leve para exibir notificações do sistema.
+* **`swaync`**: Daemon e central de notificações moderna para Wayland com suporte a histórico e DND.
 * **`kitty`**: Emulador de terminal acelerado por GPU.
 * **`dolphin`**: Gerenciador de arquivos gráfico (desenvolvido pelo KDE).
 * **`firefox`**: Navegador de internet principal.
