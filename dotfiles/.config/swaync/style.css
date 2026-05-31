@@ -22,9 +22,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   margin: 12px;
-  width: 400px;
+  min-width: 400px;
   min-height: 200px;
-  max-height: 600px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   color: @base05;
 }
@@ -42,7 +41,7 @@
 /* Scrollbar styling */
 .control-center scrollbar {
   background: transparent;
-  width: 6px;
+  min-width: 6px;
 }
 
 .control-center scrollbar slider {
