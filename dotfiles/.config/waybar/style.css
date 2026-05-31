@@ -62,6 +62,7 @@ window#waybar.hidden {
 #custom-notifications,
 #custom-hibernate,
 #custom-reboot,
+#custom-power-shutdown,
 #custom-power,
 #tray {
     padding: 0 15px;
@@ -121,8 +122,12 @@ window#waybar.hidden {
     color: #f9e2af;
 }
 
-#custom-power {
+#custom-power,
+#custom-power-shutdown {
     color: #f38ba8;
+}
+
+#custom-power {
     margin-right: 8px;
 }
 
@@ -144,6 +149,7 @@ window#waybar.hidden {
     background-color: rgba(249, 226, 175, 0.15);
 }
 
-#custom-power:hover {
+#custom-power:hover,
+#custom-power-shutdown:hover {
     background-color: rgba(243, 139, 168, 0.15);
 }
