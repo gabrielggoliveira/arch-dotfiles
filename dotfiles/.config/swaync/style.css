@@ -128,6 +128,30 @@
   padding: 12px;
   margin: 4px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  /* Linear gradient for the countdown progress bar at the bottom */
+  background-image: linear-gradient(to right, @base0D 0%, @base0D 100%);
+  background-position: bottom left;
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+
+  /* 3-second visual timer countdown animation */
+  animation: progress-timer 3s linear forwards;
+}
+
+/* Disable the visual timer line and animation inside the Control Center */
+.control-center .notification-row .notification {
+  background-image: none;
+  animation: none;
+}
+
+@keyframes progress-timer {
+  from {
+    background-size: 100% 3px;
+  }
+  to {
+    background-size: 0% 3px;
+  }
 }
 
 .notification-row:focus,
