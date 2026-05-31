@@ -61,6 +61,7 @@ window#waybar.hidden {
 #memory,
 #custom-notifications,
 #custom-hibernate,
+#custom-reboot,
 #custom-power,
 #tray {
     padding: 0 15px;
@@ -116,6 +117,10 @@ window#waybar.hidden {
     color: #b4befe;
 }
 
+#custom-reboot {
+    color: #f9e2af;
+}
+
 #custom-power {
     color: #f38ba8;
     margin-right: 8px;
@@ -133,6 +138,10 @@ window#waybar.hidden {
 
 #custom-hibernate:hover {
     background-color: rgba(180, 190, 254, 0.15);
+}
+
+#custom-reboot:hover {
+    background-color: rgba(249, 226, 175, 0.15);
 }
 
 #custom-power:hover {

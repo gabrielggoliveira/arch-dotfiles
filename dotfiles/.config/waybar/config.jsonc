@@ -20,6 +20,7 @@
         "memory",
         "tray",
         "custom/hibernate",
+        "custom/reboot",
         "custom/power"
     ],
     "hyprland/workspaces": {
@@ -73,6 +74,12 @@
         "tooltip": true,
         "tooltip-format": "Hibernar",
         "on-click": "systemctl hibernate"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": true,
+        "tooltip-format": "Reiniciar",
+        "on-click": "systemctl reboot"
     },
     "custom/power": {
         "format": "⏻",
